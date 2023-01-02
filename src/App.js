@@ -5,7 +5,11 @@ import {Routes,Route} from "react-router-dom"
 function App() {
   return (
     <div style={{display:'flex',flexDirection:'row'}}>
-      <Menu items={[
+      <Menu 
+      onClick={({key})=>{
+        console.log(key)
+      }} 
+      items={[
         { label: 'Home',icon: <HomeOutlined/> },
         { label: "Dashboard",icon:<DashboardOutlined/> },
         { label: "User List",icon:<UnorderedListOutlined/> },
